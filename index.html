@@ -35,7 +35,7 @@
                         </div>
                     </header>
                     <div class="hero__container">
-                        <div class="hero__content">
+                        
                             <div class="hero__picture">
                                 <img src="./images/hero/burger-steam.png" alt="" class="hero__burger-img">
                             </div>
@@ -47,10 +47,12 @@
                                     натуральные бургеры
                                 </div>
                             </div>
-                        </div>
+                        
                     </div>
+                    <button type="button" class=" to-next-section"></button>
                 </div>
-                <button type="button" class="to-next-section"></button>
+              
+
             </section>
             <section class="best section">
                 <div class="container">
@@ -103,6 +105,7 @@
             <section class=" section reviews">
                 <ul class="reviews__list">
                     <li class="reviews__item " style="background-image: url('images/reviews/foto1.jpg')">
+                      <div class="review">
                         <div class="reviews__hover-block">
                             <h3 class="reviews__title">Константин Спилберг</h3>
                             <div class="reviews__text">
@@ -113,6 +116,7 @@
                             <button type="button" class="btn btn--bg-black ">Подробнее</button>
                             <button type="button" class="btn btn--bg-black btn-review_phones">Читать отзыв</button>
                         </div>
+                      </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('images/reviews/foto2.jpg')">
                         <div class="reviews__hover-block">
@@ -255,22 +259,73 @@
                             <div class="form__row">
                                 <div class="form__radios">
                                     <label class="form__radio">
-                                        <input type="radio" name="card" class="form__radio_elem">
+                                        <input type="radio" name="card" class="form__radio-elem">
                                         <div class="form__radio-fake"></div>
-                                        <div class="form__radio-title">Нет</div>
+                                        <div class="form__radio-title">Потребуется сдача</div>
                                     </label>
                                     <label class="form__radio">
-                                        <input type="radio" name="card" class="form__radio_elem" checked>
+                                        <input type="radio" name="card" class="form__radio-elem" checked>
                                         <div class="form__radio-fake"></div>
-                                        <div class="form__radio-title">Нет</div>
+                                        <div class="form__radio-title">Потребуется по карте</div>
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                            <div class="form__row">
+                              <div class="form__checkboxs">
+                                <label  class="form__checkbox">
+                                  <input type="checkbox" name="not-call" class="form__checkbox-elem" >
+                                  <div class="form__checkbox-fake"></div>
+                                  <div class="form__checkbox-title">Не перезванивать</div>
+                                </label>
+                              </div>
+                            </div>
+                                <div class="form__row">
+                                    <div class="form__buttons">
+                                        <button type="button" class="btn btn--red ">Заказать</button>
+                                    </div>
+                                    <label class="form__reset">
+                                        <input type="reset" value="Очистить" class="reset__button" >
+                                    </label>
+                                  </div>
+                              
 
+                        </div>
+                      
                     </form>
 
             </section>
+            <div class="pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link pagination__link--active"></a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link"></a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link"></a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link"></a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link"></a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link"></a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link"></a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link"></a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link"></a>
+                </li>
+              </ul>
+            </div>
+
         </div>
     </div>
 
