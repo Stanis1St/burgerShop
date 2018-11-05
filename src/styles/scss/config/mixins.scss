@@ -1,0 +1,30 @@
+//Media
+@mixin desktop {
+    @media (max-width: $desktop) {
+      @content;
+    }
+  }
+  
+  @mixin laptop {
+    @media (max-width: $laptop) {
+      @content;
+    }
+  }
+  
+  @mixin tablets {
+    @media (max-width: $tablets) {
+      @content;
+    }
+  }
+  
+  @mixin phones {
+    @media (max-width: $phones) {
+      @content;
+    }
+  }
+  
+  @mixin small-phones {
+    @media (max-width: $small-phones) {
+      @content;
+    }
+  }

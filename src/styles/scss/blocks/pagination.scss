@@ -1,0 +1,38 @@
+.pagination{
+    position: fixed;
+    top:80%;
+    left:85%;
+}
+.pagination {
+    position: absolute;
+    top: 5%;
+    left: 84%;
+ }
+
+    .pagination__item {
+      width: 16px;
+      height: 16px;
+      margin-bottom: 5px;
+     }
+
+    .pagination__link::before, .pagination__link--active::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid #ffffff;
+     }
+
+    .pagination__link::before {
+      width: 4px;
+      height: 4px;
+      background-color: #ffffff; 
+    }
+
+    .pagination__link--active::after {
+      width: 14px;
+      height: 14px;
+      top: -5px;
+      left: -5px;
+    }
+  

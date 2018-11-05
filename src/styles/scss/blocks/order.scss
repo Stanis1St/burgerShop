@@ -10,14 +10,37 @@ form{
     width: 50%;
 }
 .form__row{
+    padding-top: 20px;
     display:flex;
+    align-items: center;
 }
 .form__block{
     flex:1;
     margin-right:20px;
-   
-   
 }
+.form__block-title{
+    font-family: 'ubuntulight';
+    font-size: 14px;
+
+}
+input[type="text"]::placeholder {
+    font-size: 14px;
+    color: rgb(47, 50, 52);
+    line-height: 1.714;
+
+    font-family: 'ubuntulight';
+    
+   }
+   textarea::placeholder {
+    font-size: 14px;
+    color: rgb(47, 50, 52);
+    line-height: 1.714;
+
+    font-family: 'ubuntulight';
+
+   }
+
+  
 .form__input{
     width:100%;
     border-radius: 3px ;
@@ -26,7 +49,8 @@ form{
 .textarea__input{
     resize:none;
     border-radius: 3px ;
-}
+}                                     
+///                             radio-buttons
 .form__radios {
     display: flex;
   }
@@ -36,16 +60,23 @@ form{
     margin-right: 20px;
     position: relative;
   }
-.form__radio_elem{
-   // position: absolute;
-   // left: -9999px;
+  .form__radio-title{
+    user-select: none;
+    font-size: 14px;
+    font-family: "ubuntulight";
+    color: rgb(255, 255, 255);
+
+  }
+  
+    .form__radio-elem{
+    position: absolute;
+    left: -9999px;
   }
   .form__radio-fake {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-  
-    background: transparent;
+    background: white;
     margin-right: 5px;
     position: relative;
   }
@@ -62,17 +93,55 @@ form{
   }
  
  
-  
-  .form__radio-elem:checked + .form__radio-fake {
-    border-color: rgb(75, 115, 181);
-  }
-  
   .form__radio-elem:checked + .form__radio-fake::after {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
   }
+   ////                                             checkbox      
   
-  .form__radio-elem:checked + .form__radio-fake  {
-    color: rgb(75, 115, 181);
-  }
-  
+   .form__checkboxs{
+        display:flex;
+
+    }
+    
+    .form__checkbox{
+            display: flex;
+    }
+
+     .form__checkbox-elem{
+        position:absolute;
+        left: -9999px;
+
+    }
+
+   .form__checkbox-title{
+       user-select: none;
+       margin-left: 10px;
+    font-size: 14px;
+    font-family: "ubuntulight";
+    color: rgb(255, 255, 255);
+   }
+   
+
+   .form__checkbox-fake{
+       position: relative;
+       display:block;
+       background-color: white;
+    width:15px;
+    height: 15px;
+   }
+
+   .form__checkbox-fake:after{
+       position: absolute;
+       width:0px;
+       height: 0px;
+       content:'';  
+       background:url('../images/checkbox.png') center no-repeat;
+   }
+    .form__checkbox-elem:checked + .form__checkbox-fake::after{
+
+        width:15px;
+        height: 15px;
+    }
+
+                                 

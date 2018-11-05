@@ -1,14 +1,22 @@
 .hero{
     background: url('../images/hero/bg-1.jpg')center center /cover no-repeat;
 }
+.logo{
+    display:block;
+}
 .hero__container{
 display: flex;
-flex:0.75;
+align-items: center;
 }
-.hero__content{
+.container--without-align{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*.hero__content{
     display: flex;
     align-items: center;
-}
+}*/
 .hero__text{
     padding-top:50px;
 }

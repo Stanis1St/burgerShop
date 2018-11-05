@@ -3,6 +3,7 @@
 }
 .nav__list{
     display:flex;
+    flex-wrap: wrap;
 }
 .nav__item:last-child .nav__link:after{
     display:none;
