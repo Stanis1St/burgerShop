@@ -5,14 +5,14 @@
   
   @font-face {
     font-family: 'Gagalin-Regular';
-    src: url('/fonts/Gagalin/Gagalin-Regular.woff2'); 
+    src: url('../../fonts/Gagalin/Gagalin-Regular.woff2'); 
        
   @include font;
   }
   
   @font-face {
     font-family: 'ubuntubold';
-    src: url('/fonts/Ubuntu/Ubuntu-Bold.woff2');
+    src: url('../../fonts/Ubuntu/Ubuntu-Bold.woff2');
         
     @include font;
   }
