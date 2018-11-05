@@ -19,25 +19,25 @@
   
   @font-face {
     font-family: 'ubuntulight';
-    src: url('/fonts/Ubuntu/Ubuntu-Light.woff2');
+    src: url('../../fonts/Ubuntu/Ubuntu-Light.woff2');
          @include font;
   }
   
   @font-face {
     font-family: 'ubuntumedium';
-    src: url('/fonts/Ubuntu/Ubuntu-Medium.woff2');
+    src: url('../../fonts/Ubuntu/Ubuntu-Medium.woff2');
          @include font;
   }
   
   @font-face {
     font-family: 'ubunturegular';
-    src: url('/fonts/Ubuntu/Ubuntu.woff2');
+    src: url('../../fonts/Ubuntu/Ubuntu.woff2');
   
          @include font;
   }
   
   @font-face {
     font-family: 'lifehackmedium';
-    src: url('/fonts/Lifehack/Lifehack-Medium.woff2');
+    src: url('../../fonts/Lifehack/Lifehack-Medium.woff2');
          @include font;
   }
