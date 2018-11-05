@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Gagalin-Regular';
-  src: url("/fonts/Gagalin/Gagalin-Regular.woff2");
+  src: url("../../fonts/Gagalin/Gagalin-Regular.woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntubold';
-  src: url("/fonts/Ubuntu/Ubuntu-Bold.woff2");
+  src: url("../../fonts/Ubuntu/Ubuntu-Bold.woff2");
   font-weight: normal;
   font-style: normal; }
 
@@ -161,7 +161,7 @@ table {
   border-spacing: 0; }
 
 .hero {
-  background: url("images/hero/bg-1.jpg") center center/cover no-repeat; }
+  background: url("../images/hero/bg-1.jpg") center center/cover no-repeat; }
 
 .hero__container {
   display: -webkit-box;
@@ -194,7 +194,7 @@ table {
   line-height: 1.181; }
 
 .best {
-  background: url("images/best/bg.jpg") center center no-repeat/cover; }
+  background: url("../images/best/bg.jpg") center center no-repeat/cover; }
 
 .best__list {
   display: -webkit-box;
@@ -390,7 +390,7 @@ table {
 
 .order {
   background-color: #2f3234;
-  background: url("/images/order/bg-texture.png") center center/cover; }
+  background: url("../images/order/bg-texture.png") center center/cover; }
 
 form {
   color: #fff;
