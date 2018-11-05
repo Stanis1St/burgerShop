@@ -1,0 +1,16 @@
+.title{
+    font-family: "Gagalin-Regular";
+    color:$yellow;
+    font-size:72px;
+    margin-bottom: 20px;
+  
+    &--color-black{
+        text-align: center;
+        color:$black;
+    }
+    &.title_order{
+        text-align: center;
+
+    }      
+
+}

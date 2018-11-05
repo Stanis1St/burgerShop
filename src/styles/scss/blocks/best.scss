@@ -1,0 +1,40 @@
+.best{
+    background: url('/images/best/bg.jpg')center center no-repeat /cover;
+}
+.best__list{
+    display:flex;
+}
+.best__item{
+    padding: 15px;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.best__img-pic{
+    height: 100px;
+    width: 100px;
+}
+
+.best__desc{
+    margin-top: 50px;
+    text-align: center;
+}
+.best__title{
+    font-size: 24px;
+    font-family: "lifehackmedium";
+    color: rgb(47, 50, 52);
+    line-height: 1.167;
+}
+.best__text{
+    margin-top:20px;
+    font-size: 14px;
+    color: rgba(47, 50, 52, 0.8);
+    line-height: 1.714;
+
+
+}
+
+  

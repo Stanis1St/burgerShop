@@ -1,0 +1,24 @@
+.hero{
+    background: url('/images/hero/bg-1.jpg')center center /cover no-repeat;
+}
+.hero__container{
+display: flex;
+flex:0.75;
+}
+.hero__content{
+    display: flex;
+    align-items: center;
+}
+.hero__text{
+    padding-top:50px;
+}
+
+.hero__desc{
+font-size:60px;
+font-family: "lifehackmedium";
+font-style:italic;
+color:$white;
+line-height: 1.181;
+}
+
+  
