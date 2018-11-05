@@ -9,6 +9,8 @@
   </thead>
   <tbody>
     <tr>
+      <td>           gh-pages     </td>
+    <td > https://stanis1st.github.io/burgerShop/ </td>
       <td><code>git clone 'url'</code></td>
       <td>Клонировать данный репозиторий.</td>
     </tr>
