@@ -161,7 +161,7 @@ table {
   border-spacing: 0; }
 
 .hero {
-  background: url("/images/hero/bg-1.jpg") center center/cover no-repeat; }
+  background: url("images/hero/bg-1.jpg") center center/cover no-repeat; }
 
 .hero__container {
   display: -webkit-box;
@@ -194,7 +194,7 @@ table {
   line-height: 1.181; }
 
 .best {
-  background: url("/images/best/bg.jpg") center center no-repeat/cover; }
+  background: url("images/best/bg.jpg") center center no-repeat/cover; }
 
 .best__list {
   display: -webkit-box;
