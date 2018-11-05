@@ -1,36 +1,36 @@
 @font-face {
   font-family: 'Gagalin-Regular';
-  src: url("../../fonts/Gagalin/Gagalin-Regular.woff2");
+  src: url("../fonts/Gagalin/Gagalin-Regular.woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntubold';
-  src: url("../../fonts/Ubuntu/Ubuntu-Bold.woff2");
+  src: url("../fonts/Ubuntu/Ubuntu-Bold.woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntulight';
-  src: url("/fonts/Ubuntu/Ubuntu-Light.woff2");
+  src: url("../fonts/Ubuntu/Ubuntu-Light.woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntumedium';
-  src: url("/fonts/Ubuntu/Ubuntu-Medium.woff2");
+  src: url("../fonts/Ubuntu/Ubuntu-Medium.woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubunturegular';
-  src: url("/fonts/Ubuntu/Ubuntu.woff2");
+  src: url("../fonts/Ubuntu/Ubuntu.woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'lifehackmedium';
-  src: url("/fonts/Lifehack/Lifehack-Medium.woff2");
+  src: url("../fonts/Lifehack/Lifehack-Medium.woff2");
   font-weight: normal;
   font-style: normal; }
 
@@ -319,6 +319,9 @@ table {
   text-transform: uppercase; }
   .btn:hover {
     background-color: #c1401e; }
+
+.btn-review_phones {
+  display: none; }
 
 .title {
   font-family: "Gagalin-Regular";
