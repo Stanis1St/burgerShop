@@ -29,7 +29,7 @@ const paths = {
   styles: {
     src: "src/styles/scss/main.scss",
     watch: "src/styles/scss/**/*.scss",
-    dest: "dist/"
+    dest: "dist/styles/"
   },
   stylesNlz: {
     src: "node_modules/normalize.css/normalize.css",
