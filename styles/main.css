@@ -304,6 +304,7 @@ table {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   padding: 10px 15px;
+  background-color: #e35028;
   color: #fff;
   font-size: 13px;
   -webkit-transition: 0.5s;
@@ -311,28 +312,24 @@ table {
   transition: 0.5s;
   text-transform: uppercase;
   outline: none; }
-
-.btn--red {
-  background-color: #e35028;
-  color: #fff; }
-  .btn--red:hover {
+  .btn:hover {
     background-color: #c1401e; }
-  .btn--red form {
-    margin-right: 20px; }
+  .btn--bg-black {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    margin-top: 20px;
+    background-color: #2f3234; }
+    .btn--bg-black:hover {
+      background-color: #1f2122; }
+    @media (max-width: 480px) {
+      .btn--bg-black {
+        display: none; } }
 
-.btn--bg-black {
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  margin-top: 20px;
-  background-color: #2f3234; }
-  .btn--bg-black:hover {
-    background-color: #1f2122; }
-  @media (max-width: 480px) {
-    .btn--bg-black {
-      display: none; } }
+.btn--red form {
+  margin-right: 20px; }
 
 .btn-review_phones {
   display: none; }
