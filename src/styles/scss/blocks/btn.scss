@@ -4,7 +4,7 @@
     padding: 10px 15px;
     background-color: $red;
     color:$white;
-
+    cursor: pointer;
     font-size:13px;
     transition:0.5s;
     text-transform: uppercase;
@@ -43,6 +43,7 @@
 }
 
 .btn-review_phones{
+    cursor: pointer;
     display:none;
     @include phones {
         display: block;
@@ -51,7 +52,8 @@
 
 
 .to-next-section
-{
+{       
+    cursor: pointer;
     outline: none;
     border:none;
     padding: 20px 30px;
