@@ -28,3 +28,16 @@
       @content;
     }
   }
+
+  @mixin cover{
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  }
+  @mixin circle($width, $color) {
+    width: $width;
+    height: $width;
+    border-radius: 50%;
+    background-color: $color;
+  }

@@ -1,0 +1,58 @@
+.menu{
+    background: url('../images/menu/menu-bg.jpg');
+    @include cover;
+
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.menu__accordion{
+    display:flex;
+    z-index: 2;
+    transition: transform 0.5s;
+}
+.menu__item{
+    display:flex;
+    &.slideleft{
+        .menu__title{
+            color:$yellow;
+        }
+        .menu__text{
+            opacity: 1;
+            transition: opacity 0.3s;
+            transition-delay: 0.7s;
+        }
+        .menu__content{
+            width:520px;
+        }
+    }
+}
+.menu__link{
+    display:flex;
+    @include cover;
+    align-items: flex-end;
+    width:5rem;
+    @include tablets{
+         width: 4rem;
+    }
+}
+.menu__content{
+    width:0;
+    background-color:rgba(0,0,0,0.5);
+    transition:width 0.7s;
+}
+.menu__text{
+    font-family: "ubuntulight";
+    color: $white;
+    font-size: 14px;
+    opacity: 0;
+    line-height: 1.8;
+    padding: 4rem 2rem;
+    opacity: 0;
+}
+
+
+  
+
+  

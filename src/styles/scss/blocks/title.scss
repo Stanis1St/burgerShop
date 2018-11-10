@@ -13,4 +13,33 @@
 
     }      
 
+    &.title_menu{
+        color:$white;
+        position: absolute;
+        top:15%;
+        left:10%;
+    }
 }
+.team__members-title{
+    text-align: left;
+}
+.team__member-name{
+    margin-bottom: 0px;
+    font-size: 14px;
+    color:$white;
+    line-height: 2.008;
+    text-align: left;
+}
+
+.menu__title{
+    white-space: nowrap;
+    width:100%;
+    margin-bottom:5rem;
+    transform:rotate(-90deg);
+    font-size: 40px;
+    color:$white;
+    @include tablets{
+      font-size: 35px;
+   }
+}
+
