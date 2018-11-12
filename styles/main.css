@@ -522,6 +522,9 @@ display: flex;
 
 .title_team {
   text-align: left; }
+  @media (max-width: 768px) {
+    .title_team {
+      text-align: center; } }
 
 .team__member-name {
   margin-bottom: 0px;
