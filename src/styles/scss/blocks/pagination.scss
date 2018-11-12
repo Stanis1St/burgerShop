@@ -1,5 +1,6 @@
 .pagination{
     position: fixed;
+    z-index: 2;
     top:15%;
     left:95%;
     @include tablets {
