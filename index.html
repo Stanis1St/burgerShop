@@ -16,7 +16,7 @@
             <section class="hero section">
                 <div class="container  ">
                     <header class="header">
-                        <a href="" class="logo">
+                        <a href="index.html" class="logo">
                             <img src="./images/logo.png" alt="mr burger logo" class="logo__picture">
                         </a>
                         <div class="header__buttons">
@@ -68,8 +68,10 @@
                     <ul class="best__list">
                         <li class="best__item">
                             <div class="best__img">
-                                <img src="./images/best/hand.png" alt="hand" class="best__img-pic">
-                            </div>
+                                <svg class="best__svg svg-beef">
+                                  <use xlink:href='images/symbol/sprite.svg#meat'></use>
+                                </svg>
+                              </div>
                             <div class="best__desc">
                                 <div class="best__title">100% свежее мясо</div>
                                 <div class="best__text">
@@ -81,8 +83,10 @@
                             </div>
                         </li>
                         <li class="best__item">
-                            <div class="best__img"><img src="./images/best/meat.png" alt="meat" class="best__img-pic">
-
+                            <div class="best__img">
+                                <svg class="best__svg svg-hand">
+                                    <use xlink:href='images/symbol/sprite.svg#hand'></use>
+                                  </svg>
                             </div>
                             <div class="best__desc">
                                 <div class="best__title">Ручная сборка</div>
@@ -95,8 +99,10 @@
                             </div>
                         </li>
                         <li class="best__item">
-                            <div class="best__img"><img src="./images/best/leaf.png" alt="leaf" class="best__img-pic">
-
+                            <div class="best__img">
+                                <svg class="best__svg svg-natural">
+                                    <use xlink:href='images/symbol/sprite.svg#natural'></use>
+                                  </svg>
                             </div>
                             <div class="best__desc">
                                 <div class="best__title">Натуральные ингредиенты</div>
@@ -113,13 +119,13 @@
       <section class="section team">
         <div class="team__section">
           <div class="team__content">
-            <div class="section__title">Команда</div>
+            <div class="title">Команда</div>
             <ul class="team-acco">
               <li class="team-acco__item">
                 <a class="team-acco__trigger" href="#">дэниэл редклифф</a>
-                <div class="team-acco__content">
+                <div class="team-acco__content is-active">
                   <div class="team-acco__pic">
-                    <div class="team-acco__img" style="background-image: url(./images/team/redclif.png)"></div>
+                    <div class="team-acco__img" style="background-image: url('./images/team/redclif.png')"></div>
                   </div>
                   <div class="team-acco__text">
                     <div class="team-acco__title">Шеф-повар</div>
@@ -171,9 +177,9 @@
 
            <section class="section menu">
             <h2 class="title title_menu">Меню</h2>
-                    
+
                <ul class="menu__accordion">
-                   <li class="menu__item slideleft">
+                   <li class="menu__item ">
                        <a href="#" class="menu__link" style="background-image:url('./images/menu/menu-bg--1.jpg')"> 
                         <span class="menu__title title">Для мясоедов</span>
                     </a>
@@ -207,9 +213,6 @@
                          </div>
                         </li>
                </ul>
-                     
-                  
-                   
            
            </section>
            
@@ -418,10 +421,37 @@
                                 </div>
                                 </div>
                             </div>
-                            <div class="footer-col">
-                                <div class="footer__socials">
-                                    тут будут социальные иконки свг
-                                </div>
+                            <div class="footer-col socials">
+                                <ul class="footer__socials">
+                                    <li class="social__item">
+                                        <a href="#" class="social__link">
+                                                <svg class="socials__link-icon socials__link_vk" >
+                                                        <use xlink:href="images/symbol/sprite.svg#vk"></use>
+                                                </svg>
+                                    </a>
+                                </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link">
+                                            <svg class="socials__link-icon socials__link_fb" >
+                                                    <use xlink:href="images/symbol/sprite.svg#fb"></use>
+                                            </svg>
+                                    </a>
+                                </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link">
+                                            <svg class="socials__link-icon socials__link_inst" >
+                                                    <use xlink:href="images/symbol/sprite.svg#inst"></use>
+                                            </svg>
+                                    </a>
+                                </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link">
+                                            <svg class="socials__link-icon socials__link_twitter" >
+                                                    <use xlink:href="images/symbol/sprite.svg#twitter"></use>
+                                            </svg>
+                                    </a>
+                                </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -458,7 +488,7 @@
                 </li>
               </ul>
             </div>
-            <div class="nav-mobile ">
+            <div class="nav-mobile  ">
                 <div class="nav-mobile__menu">
                     <ul class="nav-mobile__list">
                         <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Главная</a></li>
@@ -470,6 +500,11 @@
                         <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Как мы работаем</a></li>
                         <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Контакты </a></li>
                     </ul>
+                </div>
+                <div class="mobile__logo">
+                        <a href="index.html" class="logo">
+                                <img src="./images/logo.png" alt="mr burger logo" class="logo__picture">
+                            </a>
                 </div>
             </div>
             <div class="nav-trigger ">
