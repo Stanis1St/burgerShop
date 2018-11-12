@@ -2,6 +2,10 @@
     background: url('../images/best/bg.jpg')center center no-repeat /cover;
     display: flex;
     align-items: center;
+    &__svg {
+        width: 97px;
+        height: 89px;
+      }
 }
 .best__list{
     display:flex;
@@ -49,4 +53,15 @@
 
 }
 
+.svg-beef {
+    fill: #e35028;
+  }
+  
+  .svg-hand {
+    fill: #f9b43b;
+  }
+  
+  .svg-natural {
+    fill: #8bc03f;
+  }
   

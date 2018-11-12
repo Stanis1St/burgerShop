@@ -19,21 +19,32 @@
 }
 .footer-row{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
     @include phones{
         align-items: center;
         flex-direction: column;
+        justify-content: center
     }
 }
 .footer-col{
     margin-left: 2rem;
     padding: 2% 0%;
+    @include phones{
+        width: 100%;
+        margin: initial;
+        margin-bottom: -2%;
+    }
 }
 .footer__contacts{
 
 }
 .contacts{
-    
+    @include phones{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 .contacts__adress{
     font-size: 0.875rem;
@@ -47,6 +58,35 @@ font-family: 'ubuntubold';
 font-size: 0.875rem;
 
 }
+.socials{
+   
+}
 .footer__socials{
     margin-right:2em;
+    display: flex;
+    @include phones{
+    justify-content: center;
+  
+        margin: initial;
+      
+    }
+}
+.social__item{
+    padding-right: 1.25rem;
+    @include phones{
+    padding: 0% 1%;
+    }
+}
+
+.social__link{
+    display:block;
+
+}
+.socials__link-icon{
+width: 1.56rem;
+height:1.56rem;
+fill:#606060;
+&:hover{
+    fill:$white;
+}
 }

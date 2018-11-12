@@ -2,13 +2,20 @@
 }
 
 .team-acco__item {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
   margin-bottom: 2.5rem;
-  
+
+  @include tablets{
+ display: block;
+
+  }
 	&:last-child {
 		margin-bottom: 0;
 	}
 
-	&.active {
+	&.is-active {
 		.team-acco__trigger {
 			color: $yellow;
 
@@ -20,6 +27,7 @@
 }
 
 .team-acco__trigger {
+	
 	color: #fff;
     font-size: 0.875rem;
     font-family: "Gagalin-Regular";
@@ -28,7 +36,8 @@
   display: inline-flex;
   margin-bottom: 1.25rem;
   align-items: center;  
-  
+
+ 
   @include tablets() {
     font-size: 1.56rem;
   }
@@ -40,7 +49,11 @@
 		left: -1.125rem;
 		top: 0.2rem;
 		width: 0;
-    height: 0;
+	height: 0;
+	
+	@include tablets{
+		top:1rem;
+	}
 	}
 
 	&:before {
@@ -59,33 +72,56 @@
 		border-right: 0.3125rem solid transparent;
 		border-top: 0px solid transparent;
 	}
+	
+}
+.team-acco__content {
+	height: 0;
+	overflow: hidden;
+	display: flex;
+	&.is-active{
+		height: 8rem;
+		@include tablets{
+			height: 12rem;
+			flex-direction: column;
+			align-items: center;
+		}
+
+	}
 }
 
-.team-acco__content {
-	padding-top: 0.875rem;
-  display: none;
-}
 
 .team-acco__pic {
 	text-align: center;
 	width: 30%;
+	@include tablets{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1em;
+		}
 }
 
 .team-acco__img {
+	
 	width: 6.25rem;
 	height: 6.25rem;
 	@include cover;
 	border-radius: 50%;
+	
 }
 
 .team-acco__text {
-	width: 70%;
+	width: 50%;
 }
 
 .team-acco__pic, .team-acco__text {
 }
 
 .team-acco__title {
+	text-align: left;
+	@include tablets{
+		text-align: center;
+
+	}
     font-family: 'ubuntubold';
 	font-size: 0.875rem;
 	color: #fff;
@@ -93,6 +129,11 @@
 }
 
 .team-acco__text-content {
+	text-align: left;
+	@include tablets{
+		text-align: center;
+
+	}
 font-family: 'ubuntulight';
 	color: #fff;
 	font-size: 0.875rem;
