@@ -28,6 +28,10 @@
 
 .title_team{
     text-align: left;
+    @include tablets{
+        text-align: center;
+
+     }
 }
 .team__member-name{
     margin-bottom: 0px;
