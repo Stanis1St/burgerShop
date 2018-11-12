@@ -875,6 +875,7 @@ textarea::placeholder {
 
 .pagination {
   position: fixed;
+  z-index: 2;
   top: 15%;
   left: 95%; }
   @media (max-width: 768px) {
@@ -1465,3 +1466,9 @@ textarea::placeholder {
   fill: #606060; }
   .socials__link-icon:hover {
     fill: #fff; }
+
+.contacts__phone-svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #e35028;
+  margin-right: 0.3125rem; }
