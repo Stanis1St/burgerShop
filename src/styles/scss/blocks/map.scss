@@ -72,10 +72,14 @@ font-size: 0.875rem;
     }
 }
 .social__item{
+    &:hover{
+        transform: scale(1.2);
+    }
     padding-right: 1.25rem;
     @include phones{
     padding: 0% 1%;
     }
+    transition:0.5s;
 }
 
 .social__link{

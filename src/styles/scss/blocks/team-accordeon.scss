@@ -87,12 +87,13 @@
 		}
 
 	}
+	transition: 0.5s;
 }
 
 
 .team-acco__pic {
 	text-align: center;
-	width: 30%;
+	width: 24%;
 	@include tablets{
 		display: flex;
 		justify-content: center;

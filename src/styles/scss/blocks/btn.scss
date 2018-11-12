@@ -25,6 +25,11 @@
         background-color: rgb(31, 33, 34);
     }
 
+    @include tablets {
+        align-self: center;
+        margin-top:0.5rem;
+        }
+
         @include phones {
         display: none;
         }
