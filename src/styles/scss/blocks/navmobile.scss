@@ -27,8 +27,8 @@
       .logo {
         display: block;
         position: fixed;
-        top: 10px;
-        left: 24px;
+        top: 0.625rem;
+        left: 1.5rem;
         z-index: 999;
       }
     }
@@ -43,7 +43,7 @@
       align-items: center;
       &::after {
         content: "";
-        @include circle(5px, $white);
+        @include circle(0.3125rem, $white);
         margin: 1rem 0;
       }
       &:last-child::after {
@@ -52,8 +52,8 @@
     }
     &__link {
       color:$white;
-      font-size: 22px;
-      padding: 4px;
+      font-size: 1.375rem;
+      padding: 0.25rem;
       text-transform: uppercase;
     }
 }

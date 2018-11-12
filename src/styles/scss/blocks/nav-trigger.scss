@@ -1,8 +1,8 @@
 .nav-trigger {
     display: none;
     position: fixed;
-    top: 29px;
-    right: 28px;
+    top: 2.4rem;
+    right: 1.0rem;
     z-index: 999;
     @include tablets {
       display: block;
@@ -17,9 +17,9 @@
       &::before,
       &::after {
         display: block;
-        height: 4px;
+        height:4px;
         width: 25Px;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         background-color: $white;
       }
       &::after,

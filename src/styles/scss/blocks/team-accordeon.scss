@@ -1,0 +1,99 @@
+.team-acco {
+}
+
+.team-acco__item {
+  margin-bottom: 2.5rem;
+  
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.active {
+		.team-acco__trigger {
+			color: $yellow;
+
+			&:before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+}
+
+.team-acco__trigger {
+	color: #fff;
+    font-size: 0.875rem;
+    font-family: "Gagalin-Regular";
+	text-decoration: none;
+	position: relative;
+  display: inline-flex;
+  margin-bottom: 1.25rem;
+  align-items: center;  
+  
+  @include tablets() {
+    font-size: 1.56rem;
+  }
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: -1.125rem;
+		top: 0.2rem;
+		width: 0;
+    height: 0;
+	}
+
+	&:before {
+		border-top: 0.4375rem solid $yellow;
+		border-left: 0.3125rem solid transparent;
+		border-right: 0.3125rem solid transparent;
+		border-bottom: 0rem solid transparent;
+		transform: rotate(0deg);
+		transition: .3s;
+	}
+
+	&:after {
+		display: none;
+		border-bottom: 0.4375rem solid $yellow;
+		border-left: 0.3125rem solid transparent;
+		border-right: 0.3125rem solid transparent;
+		border-top: 0px solid transparent;
+	}
+}
+
+.team-acco__content {
+	padding-top: 0.875rem;
+  display: none;
+}
+
+.team-acco__pic {
+	text-align: center;
+	width: 30%;
+}
+
+.team-acco__img {
+	width: 6.25rem;
+	height: 6.25rem;
+	@include cover;
+	border-radius: 50%;
+}
+
+.team-acco__text {
+	width: 70%;
+}
+
+.team-acco__pic, .team-acco__text {
+}
+
+.team-acco__title {
+    font-family: 'ubuntubold';
+	font-size: 0.875rem;
+	color: #fff;
+	margin-bottom: 0.875rem;
+}
+
+.team-acco__text-content {
+font-family: 'ubuntulight';
+	color: #fff;
+	font-size: 0.875rem;
+}

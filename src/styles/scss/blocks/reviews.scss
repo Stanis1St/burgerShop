@@ -9,6 +9,7 @@
 .reviews__item{
     width: 25%;
     height: 50%; 
+    
     @include tablets {
         width: 50%;
         height: 25%;
@@ -32,6 +33,7 @@
       }
 
     .reviews__hover-block{
+        padding: 0% 7%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -56,17 +58,17 @@
  
   
 .reviews__title{
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: "Gagalin-regular";
     line-height: 2;
     @include phones {
-        font-size: 24px;
+        font-size: 1.5rem;
         text-align: center;
       }
 }
 
 .reviews__text{
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: "ubuntulight";
     line-height: 1.7;
     @include phones {

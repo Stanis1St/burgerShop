@@ -1,6 +1,8 @@
 //Config
 @import 'config/variables.scss';
 @import 'config/mixins.scss';
+@import 'config/media.scss';
+
 //Layout
 @import 'layout/fonts.scss';
 @import 'layout/base.scss';
@@ -20,5 +22,13 @@
 @import "blocks/menu.scss";
 @import "blocks/navmobile.scss";
 @import "blocks/nav-trigger.scss";
+@import "blocks/hamburger-menu__link.scss";
+@import "blocks/hamburger-menu.scss";
+@import "blocks/team-accordeon.scss";
+@import "blocks/map.scss";
+
+
+
+
 
 

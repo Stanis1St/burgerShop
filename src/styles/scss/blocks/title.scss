@@ -1,8 +1,8 @@
 .title{
     font-family: "Gagalin-Regular";
     color:$yellow;
-    font-size:72px;
-    margin-bottom: 20px;
+    font-size:4.5rem;
+    margin-bottom: 1.25rem;
   
     &--color-black{
         text-align: center;
@@ -19,13 +19,17 @@
         top:15%;
         left:10%;
     }
+    
+    @include tablets{
+        font-size: 3.9rem;
+     }
 }
 .team__members-title{
     text-align: left;
 }
 .team__member-name{
     margin-bottom: 0px;
-    font-size: 14px;
+    font-size: 0.875rem;
     color:$white;
     line-height: 2.008;
     text-align: left;
@@ -36,10 +40,10 @@
     width:100%;
     margin-bottom:5rem;
     transform:rotate(-90deg);
-    font-size: 40px;
+    font-size: 2.5rem;
     color:$white;
     @include tablets{
-      font-size: 35px;
+      font-size: 2.1875rem;
    }
 }
 

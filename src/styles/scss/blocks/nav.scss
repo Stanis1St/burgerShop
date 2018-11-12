@@ -1,9 +1,13 @@
 .nav{
-    margin-right: 15px;
+    margin-right: 0.937rem;
 }
 .nav__list{
+    width: 100%;
+
     display:flex;
-    flex-wrap: wrap;
+}
+.nav__item {
+    white-space: nowrap;
 }
 .nav__item:last-child .nav__link:after{
     display:none;
@@ -11,18 +15,18 @@
 
 .nav__link{
     color:#fff;
-    font-size: 13px;
+    font-size: 0.8121rem;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     &:after{
         content:"";
-        width: 4px;
-        height: 4px;
+        width: 0.25rem;
+        height: 0.25rem;
         display: block;
         border-radius: 50%;
         background: $white;
-        margin: 0 10px;
+        margin: 0 0.625rem;
       
        
     }

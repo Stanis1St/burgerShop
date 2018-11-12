@@ -1,37 +1,48 @@
 .best{
     background: url('../images/best/bg.jpg')center center no-repeat /cover;
+    display: flex;
+    align-items: center;
 }
 .best__list{
     display:flex;
+    @include phones{
+        flex-direction: column;
+    }
 }
 .best__item{
-    padding: 15px;
+    padding: 0.93rem;
     flex:1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-
+    @include phones{
+        flex-direction: initial;
+    }
 }
 .best__img-pic{
-    height: 100px;
-    width: 100px;
+    height: 6.25rem;
+    width: 6.25rem;
 }
 
 .best__desc{
-    margin-top: 50px;
+    margin-top: 3.1rem;
     text-align: center;
+    @include phones{
+      text-align: left;
+      margin-left: 1.25rem;
+    }
 }
 .best__title{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: "lifehackmedium";
     color: rgb(47, 50, 52);
     line-height: 1.167;
 }
 .best__text{
     font-family: 'ubuntulight';
-    margin-top:20px;
-    font-size: 14px;
+    margin-top:1.5rem;
+    font-size: 0.875rem;
     color: rgba(47, 50, 52, 0.8);
     line-height: 1.714;
 

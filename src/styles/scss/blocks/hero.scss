@@ -1,14 +1,62 @@
 .hero{
     background: url('../images/hero/bg-1.jpg')center center /cover no-repeat;
+    position: relative;
+    @include tablets{
+          min-height:140vh;
+    }
+  
 }
+
+
+    
+
 .logo{
     display:block;
 }
-.hero__container{
+/*.hero__container{
 display: flex;
-align-items: center;
-}
-.container--without-align{
+@include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20%;
+  }
+}*/
+.hero__content {
+    display: flex;
+    
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 10%;
+    }
+  }
+  
+  .hero__container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+  
+  .hero__left,
+  .hero__right {
+    float: left;
+    width: 50%;
+    @include tablets() {
+      float: none;
+      width: auto;
+    }
+  }
+  .hero__right {
+    padding-top: 7.18rem;
+    @include tablets() {
+      padding-top: 0;
+    }
+  }
+/*.container--without-align{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,15 +66,25 @@ align-items: center;
     align-items: center;
 }*/
 .hero__text{
-    padding-top:50px;
+    padding-top:3.125rem;
 }
-
+.hero__burger-img{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
 .hero__desc{
-font-size:60px;
+font-size:3.75rem;
 font-family: "lifehackmedium";
 font-style:italic;
 color:$white;
-line-height: 1.181;
+line-height: 1em;
+@include tablets{
+    font-size: 3.4rem;
+ }
 }
 
   

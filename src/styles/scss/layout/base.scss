@@ -4,9 +4,18 @@ html,
 body {
   height: 100%;
 }
+html{
+  font-size: 1rem;
+  @include tablets {
+    font-size: 0.937rem;
+  }
+
+  @include phones {
+    font-size: 0.8121rem;
+  }
+}
 
 body {
-    font-size: 16px;
     line-height: 1.42;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -43,19 +52,20 @@ body {
   .section {
     overflow: hidden;
     height: 100vh;
-    min-height: 650px;
+    //min-height: 650px;
+   
     
     &_centered {
       display: flex;
       flex-direction: column;
       justify-content: center;
+     }
     }
-  }
-  .section-title {
-    font-size: 72px;
+      .section-title {
+    font-size: 4.5rem;
     //@include gagalin();
     color: $yellow;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   
     &_color {
       &_black {
@@ -73,20 +83,15 @@ body {
 
   .container {
     margin: 0 auto;
-    width: 940px;
+    width: 95%;
+    max-width: 940px;
     display: flex;
     flex-direction: column;
-    justify-content:  center;
-    height: 100%;
-    &--without-align{
-        justify-content: initial;
-        
-    }
+  
   }
   .wrapper {
     position: relative;
     width: 100%;
-    min-width: 940px + 20px;
     min-height: 100%;
     overflow: hidden;
   }
