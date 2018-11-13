@@ -23,6 +23,16 @@
 				transform: rotate(-180deg);
 			}
 		}
+
+		.team-acco__content{
+			height: auto;
+			@include tablets{
+			
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
 	}
 }
 
@@ -78,26 +88,19 @@
 	height: 0;
 	overflow: hidden;
 	display: flex;
-	&.is-active{
-		height: 8rem;
-		@include tablets{
-			height: 12rem;
-			flex-direction: column;
-			align-items: center;
-		}
-
-	}
+	
 	transition: 0.5s;
 }
 
 
 .team-acco__pic {
-	text-align: center;
-	width: 24%;
+	margin-right: 2rem;
 	@include tablets{
 		display: flex;
 		justify-content: center;
 		margin-bottom: 1em;
+		margin-right: 0rem;
+
 		}
 }
 

@@ -74,6 +74,9 @@
     @include phones {
         display: none;
       }
+      @include tablets{
+          text-align: center;
+      }
 
 }
 

@@ -14,42 +14,49 @@ form{
     }
 }
 .form__col{
-    min-width: 50%;
+    width: 100%;
     @include tablets{
-        min-width: 50%;
-    }
-   
+       padding: 0% 5%;
+                     }      
+                      //колонка формы заказа
+    @include phones{    
+        padding: 0;
+                }
 }
 
-.form__col_part2{
-    @include phones{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
+
+.form_part1{
+    margin-right: 1.25rem;    // colonka 1
+     @include tablets{
+    margin-right: 0;
+                    }
+                }
+.form_part2{
+    .form__row{
+        @include phones{
+        display:flex;             //colonka 2 vistaivaem d center  dlya phones
+        justify-content: center;
+                        }
+             }
+
+            }
 .form__row{
     padding-top: 1.25rem;
+    width: 100%;
     display:flex;
     align-items: center;
-}
-.form__part1{
-    @include tablets{
-        padding: 0% 7%;
-       
-    }
-}
-.form__part2{
-    min-width: 50%;
     
-  @include tablets{
-      padding: 0% 7%;
-      width:100%;
-  }
 }
-.form__block{
-    flex:1;
+
+
+.form__block{    /// block s isputom na vsu shirinu
+   flex:1;
     margin-right:1.25rem;
+    &:last-child{
+        margin-right:0;
+
+    }
+   
 }
 .form__block-title{
     font-family: 'ubuntulight';
@@ -74,10 +81,13 @@ input[type="text"]::placeholder {
    }
 
   
-.form__input{
+.form__input{    //forma vvoda bordur esli active
     width:100%;
     border-radius: 0.1875rem ;
     border: 0.1875rem solid transparent;
+    &.is-active{
+        border:2px solid $yellow;
+    }
 }
 .textarea__input{
     resize:none;

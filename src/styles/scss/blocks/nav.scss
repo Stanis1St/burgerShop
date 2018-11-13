@@ -5,6 +5,8 @@
     width: 100%;
 
     display:flex;
+    flex-wrap: wrap;
+    margin-left: 2rem;
 }
 .nav__item {
     white-space: nowrap;

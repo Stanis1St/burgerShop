@@ -7,19 +7,18 @@
 .footer{
     color:$white;
     background: url('../images/map/footer-bg.jpg')center no-repeat /cover;
-    position: relative;
-    min-height: 11%;
-    width: 100%;
-}
-.footer-container{
     position: absolute;
-    min-height: 11%;
+    height: 3.75rem;
     width: 100%;
-   
+    @include phones{
+        height: 7.5rem;
+
+    }
 }
+
 .footer-row{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     @include phones{
         align-items: center;
