@@ -161,6 +161,9 @@ table {
   background: url("../images/hero/bg-1.jpg") center center/cover no-repeat;
   position: relative; }
 
+.container__hero {
+  height: 100%; }
+
 .logo {
   display: block; }
 
@@ -377,10 +380,6 @@ display: flex;
       -ms-flex-align: center;
           align-items: center; }
 
-@media (max-width: 768px) {
-  .header__links {
-    margin-right: 3rem; } }
-
 .nav__header {
   margin-right: 1.25rem; }
   @media (max-width: 768px) {
@@ -395,7 +394,11 @@ display: flex;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: 2rem; }
 
 .nav__item {
   white-space: nowrap; }
@@ -475,14 +478,14 @@ display: flex;
       display: block; } }
 
 .to-next-section {
-  margin: 2rem auto;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
   cursor: pointer;
   outline: none;
   border: none;
   padding: 1.25rem 1.875rem;
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
+  align-self: center;
   margin-bottom: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -632,6 +635,9 @@ display: flex;
   @media (max-width: 480px) {
     .reviews__text {
       display: none; } }
+  @media (max-width: 768px) {
+    .reviews__text {
+      text-align: center; } }
 
 .order {
   background-color: #2f3234;
@@ -664,29 +670,34 @@ form {
               align-items: center; } }
 
 .form__col {
-  min-width: 50%; }
+  width: 100%; }
   @media (max-width: 768px) {
     .form__col {
-      min-width: 50%; } }
+      padding: 0% 5%; } }
+  @media (max-width: 480px) {
+    .form__col {
+      padding: 0; } }
+
+.form_part1 {
+  margin-right: 1.25rem; }
+  @media (max-width: 768px) {
+    .form_part1 {
+      margin-right: 0; } }
 
 @media (max-width: 480px) {
-  .form__col_part2 {
+  .form_part2 .form__row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; } }
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
 
 .form__row {
   padding-top: 1.25rem;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -696,23 +707,14 @@ form {
       -ms-flex-align: center;
           align-items: center; }
 
-@media (max-width: 768px) {
-  .form__part1 {
-    padding: 0% 7%; } }
-
-.form__part2 {
-  min-width: 50%; }
-  @media (max-width: 768px) {
-    .form__part2 {
-      padding: 0% 7%;
-      width: 100%; } }
-
 .form__block {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin-right: 1.25rem; }
+  .form__block:last-child {
+    margin-right: 0; }
 
 .form__block-title {
   font-family: 'ubuntulight';
@@ -771,6 +773,8 @@ textarea::placeholder {
   -webkit-border-radius: 0.1875rem;
           border-radius: 0.1875rem;
   border: 0.1875rem solid transparent; }
+  .form__input.is-active {
+    border: 2px solid #f9b43b; }
 
 .textarea__input {
   resize: none;
@@ -1226,6 +1230,19 @@ textarea::placeholder {
       -webkit-transform: rotate(-180deg);
           -ms-transform: rotate(-180deg);
               transform: rotate(-180deg); }
+  .team-acco__item.is-active .team-acco__content {
+    height: auto; }
+    @media (max-width: 768px) {
+      .team-acco__item.is-active .team-acco__content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; } }
 
 .team-acco__trigger {
   color: #fff;
@@ -1284,24 +1301,9 @@ textarea::placeholder {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
-  .team-acco__content.is-active {
-    height: 8rem; }
-    @media (max-width: 768px) {
-      .team-acco__content.is-active {
-        height: 12rem;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-            -ms-flex-align: center;
-                align-items: center; } }
 
 .team-acco__pic {
-  text-align: center;
-  width: 24%; }
+  margin-right: 2rem; }
   @media (max-width: 768px) {
     .team-acco__pic {
       display: -webkit-box;
@@ -1312,7 +1314,8 @@ textarea::placeholder {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center;
-      margin-bottom: 1em; } }
+      margin-bottom: 1em;
+      margin-right: 0rem; } }
 
 .team-acco__img {
   width: 6.25rem;
@@ -1365,24 +1368,22 @@ textarea::placeholder {
 .footer {
   color: #fff;
   background: url("../images/map/footer-bg.jpg") center no-repeat/cover;
-  position: relative;
-  min-height: 11%;
-  width: 100%; }
-
-.footer-container {
   position: absolute;
-  min-height: 11%;
+  height: 3.75rem;
   width: 100%; }
+  @media (max-width: 480px) {
+    .footer {
+      height: 7.5rem; } }
 
 .footer-row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly; }
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   @media (max-width: 480px) {
     .footer-row {
       -webkit-box-align: center;
