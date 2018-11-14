@@ -380,6 +380,9 @@ display: flex;
       -ms-flex-align: center;
           align-items: center; }
 
+.header__links {
+  margin-right: 2.5rem; }
+
 .nav__header {
   margin-right: 1.25rem; }
   @media (max-width: 768px) {
