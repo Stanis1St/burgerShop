@@ -3,36 +3,31 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    position:relative;
 }
 .footer{
     color:$white;
     background: url('../images/map/footer-bg.jpg')center no-repeat /cover;
     position: absolute;
-    height: 3.75rem;
     width: 100%;
-    @include phones{
-        height: 7.5rem;
-
-    }
+   bottom: 0;
+   padding: 10px 0;
 }
 
 .footer-row{
     display:flex;
     justify-content: space-between;
+    align-items: center;
 
     @include phones{
-        align-items: center;
         flex-direction: column;
         justify-content: center
     }
 }
 .footer-col{
-    margin-left: 2rem;
-    padding: 2% 0%;
+  
     @include phones{
         width: 100%;
-        margin: initial;
-        margin-bottom: -2%;
     }
 }
 .footer__contacts{
@@ -58,15 +53,16 @@ font-size: 0.875rem;
 
 }
 .socials{
-   
+    @include phones{
+        margin-top: 10px;
+    }
+
 }
 .footer__socials{
-    margin-right:2em;
     display: flex;
     @include phones{
     justify-content: center;
   
-        margin: initial;
       
     }
 }
@@ -74,15 +70,18 @@ font-size: 0.875rem;
     &:hover{
         transform: scale(1.2);
     }
-    padding-right: 1.25rem;
-    @include phones{
-    padding: 0% 1%;
-    }
-    transition:0.5s;
+    
+   &:last-child{
+       margin-right: 0;
+   }
+
+
+    transition:0.3s;
+   margin-right: 10px;
 }
 
 .social__link{
-    display:block;
+    display:flex;
 
 }
 .socials__link-icon{
@@ -92,6 +91,9 @@ fill:#606060;
 &:hover{
     fill:$white;
 }
+}
+.contacts__phone{
+    margin-top: 5px;
 }
 .contacts__phone-svg{
     width: 1rem;
