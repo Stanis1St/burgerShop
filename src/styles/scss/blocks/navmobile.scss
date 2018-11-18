@@ -1,5 +1,5 @@
 .nav-mobile {
-    background: red;
+    background: black;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@
       display: none;
     }
     &.is-active {
-        background: red;
+        background: black;
 
       top: 0;
       bottom: 0;

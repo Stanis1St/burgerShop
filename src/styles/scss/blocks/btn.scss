@@ -87,4 +87,42 @@
 }
 
 
+/// кнопки на слайдере 
+.scroll-btn {
+    padding: .5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
   
+    &_left,
+    &_right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 99;
+      padding: 5rem 1rem;
+    }
+  
+    &_left {
+      right: -2rem;
+    }
+  
+    &_right {
+      left: -2rem;
+    }
+  }
+  
+  .arrow-scroll {
+    width: 2rem;
+    height: 1rem;
+    fill: white;
+  
+    &--left {
+      transform: rotate(-90deg);
+    }
+  
+    &--right {
+      transform: rotate(90deg);
+    }
+  }

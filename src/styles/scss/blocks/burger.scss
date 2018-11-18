@@ -1,0 +1,49 @@
+.burger {
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    position: relative;
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+  .burger__photo {
+    flex: 1;
+    padding: 80px 0;
+    @include tablets {
+      flex: auto;
+      padding-bottom: 0;
+      text-align: center;
+    }
+  }
+  .burger__desc {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 1rem;
+    @include tablets {
+      flex: auto;
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+  .burger__img {
+    max-width: 100%;
+    @include tablets {
+      max-width: 80%;
+    }
+  }
+  .burger__text {
+      font-family: 'ubuntulight';
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.7;
+  }
+  .burger__order {
+    display: flex;
+    align-items: baseline;
+    @include tablets {
+      justify-content: center;
+    }
+  }
+  

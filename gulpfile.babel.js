@@ -42,7 +42,7 @@ const paths = {
     dest: 'dist/styles/found'
   },
   scripts: {
-    src: 'src/scripts/main.js',
+    src: 'src/scripts/*.js',
     dest: 'dist/scripts/'
   },
   html: {

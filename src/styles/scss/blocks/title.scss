@@ -23,7 +23,21 @@
     @include tablets{
         font-size: 3.9rem;
      }
-    
+     &.title_burger{
+         color:white;
+         font-size:3rem;
+         line-height: 1.053;
+            text-align: center;
+     }
+    &.title_price{
+        color:$red;
+        font-size:4.3rem;
+    }
+    &.title_price-name{
+        color:$red;
+        font-size:1.9rem;
+        margin-right: 30px;
+    }
 }
 
 .title_team{
