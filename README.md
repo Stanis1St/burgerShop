@@ -10,13 +10,8 @@
   <tbody>
     <tr>
       <td>           gh-pages     </td>
-    <td > https://stanis1st.github.io/burgerShop/ </td>
-     
-    </tr>
-    <tr>
-      <td><code>cd path/to/</code></td>
-      <td>Зайти в папку с проектом.</td>
-    </tr>
+    <td > https://stanis1st.github.io/burgerShop/</td>
+     </tr>
     <tr>
       <td><code>npm i</code></td>
       <td>Установить зависимости.</td>
