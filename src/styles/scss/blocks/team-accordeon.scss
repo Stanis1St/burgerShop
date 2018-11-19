@@ -25,16 +25,18 @@
 		}
 
 		.team-acco__content{
-			height: auto;
-			@include tablets{
+		//	height: auto;
+
+	//	display: flex;
 			
-				flex-direction: column;
-				align-items: center;
-			}
 		}
 
 	}
 }
+
+
+
+
 
 .team-acco__trigger {
 	
@@ -84,14 +86,21 @@
 	}
 	
 }
+.team-acco__content-wrap{
+display: none;
+}
 .team-acco__content {
-	height: 0;
+//	height: 0;
 	overflow: hidden;
 	display: flex;
 	
-	transition: 0.5s;
+	//transition: 0.5s;
+	@include tablets{
+			
+		flex-direction: column;
+		align-items: center;
+	}
 }
-
 
 .team-acco__pic {
 	margin-right: 2rem;

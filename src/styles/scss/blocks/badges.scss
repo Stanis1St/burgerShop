@@ -1,6 +1,6 @@
 .burger__badge{
     position: absolute;
-  top:320px;
+  top:350px;
   @include tablets{
     top: 10%;
     right: 0%;
@@ -40,6 +40,7 @@ left: -44px;
 }
 
 .burger__btn-consist{
+    cursor: pointer;
     position: absolute;
     display: flex;
     justify-content: center;
