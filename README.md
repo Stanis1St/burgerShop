@@ -11,8 +11,7 @@
     <tr>
       <td>           gh-pages     </td>
     <td > https://stanis1st.github.io/burgerShop/ </td>
-      <td><code>git clone 'url'</code></td>
-      <td>Клонировать данный репозиторий.</td>
+     
     </tr>
     <tr>
       <td><code>cd path/to/</code></td>
