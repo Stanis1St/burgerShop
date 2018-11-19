@@ -84,7 +84,7 @@ function mySlider (){
 mySlider();
 
 
-////
+////аккордеон тим
 $(function(){
     let $wraps=$('.team-acco__content-wrap');
 	$('.team-acco__trigger').on('click', function(e){
@@ -92,12 +92,8 @@ $(function(){
         let $current= $(this).parents('.team-acco__item').find('.team-acco__content-wrap');
        console.log($current);
        $($wraps).not($current).slideUp(500).parents('.team-acco__item').removeClass('is-active');
-       $current.slideToggle(500).parents('.team-acco__item').addClass('is-active');
-        //$answers.not($current).slideUp(500);
-        //$current.slideToggle(500).parents('.team-acco__item').toggleClass('is-active').slideToggle(500);
-		//let $current=$(this).parents('.team-acco__item').find('.team-acco__content').stop(true).slideDown(500);
-//	$answers.not($current).slideUp(555);
-		 // $(this).parents('.item').find('.answer').toggleClass('active');
+       $current.slideToggle(500).parents('.team-acco__item').toggleClass('is-active');
+        
 	});
 	
 
