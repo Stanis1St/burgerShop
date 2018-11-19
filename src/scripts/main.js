@@ -92,7 +92,7 @@ $(function(){
         let $current= $(this).parents('.team-acco__item').find('.team-acco__content-wrap');
        console.log($current);
        $($wraps).not($current).slideUp(500).parents('.team-acco__item').removeClass('is-active');
-       $current.slideToggle(500).parents('.team-acco__item').addClass('is-active');
+       $current.slideToggle(500).parents('.team-acco__item').toggleClass('is-active');
         
 	});
 	
