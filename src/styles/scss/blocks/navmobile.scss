@@ -27,8 +27,15 @@
       .logo {
         display: block;
         position: fixed;
-        top: 0.625rem;
-        left: 1.5rem;
+        top: 12px;
+        @include tablets{
+          left: 19px;
+
+        }
+        @include phones{
+          left: 13px;
+
+        }
         z-index: 999;
       }
     }
