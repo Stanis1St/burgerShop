@@ -12,31 +12,61 @@
   }
   
   .overlay-wrap {
-    position: relative;
+    margin:0 auto;
   }
   
   .content {
     width: 400px;
-    background: #444;
+    background: #fff;
     border-radius: 5px;
     padding: 10px;
-    color: #fff;
+    color: black;
     font: 16px Helvetica, sans-serif;
     margin: 0;
   }
   
   .close {
-    font: 16px Helvetica, sans-serif;
-    color: #fff;
-    position: absolute;
-    right: -5px;
-    top: -10px;
+   // font: 16px Helvetica, sans-serif;
+    //color: #fff;
+    display: block;
+    position: relative;
+    right: -24rem;
+    top: 0.5rem;
     background: #d00;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
     text-decoration: none;
+    &:after{
+      top: 12px;
+   left: 5px;
+ transform: translate(-50%);
+   position:absolute;
+   content:'';
+  width: 20px;
+ height: 5px;
+ background: gold;
+transform: rotate(45deg);
+ }
+ &:before{
+       top: 12px;
+   left: 5px;
+   position:absolute;
+   content:'';
+  width: 20px;
+ height: 5px;
+ background: gold;
+transform: rotate(-45deg);
+ }
+ 
+
   }
+ 
   
+  .overlay__title{
+    font-size: 0.875rem;
+    font-family: "Gagalin-regular";
+    line-height: 2;
+  }
