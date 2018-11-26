@@ -1,3 +1,6 @@
+window.onload = function() {
+
+
 ///мобильное меню 
 function mobileMenu () {
     const navTrigger =document.querySelector('.nav-trigger');
@@ -86,12 +89,10 @@ mySlider();
 
 ////аккордеон тим
 
-$(function(){
     let $wraps=$('.team-acco__content-wrap');
 	$('.team-acco__trigger').on('click', function(e){
         e.preventDefault();
         let $current= $(this).parents('.team-acco__item').find('.team-acco__content-wrap');
-       console.log($current);
        $($wraps).not($current).slideUp(500).parents('.team-acco__item').removeClass('is-active');
        $current.slideToggle(500).parents('.team-acco__item').toggleClass('is-active');
         
@@ -102,33 +103,57 @@ $(function(){
    
 
 /// overlay 
-const openButton = document.querySelector("#openOverlay");
-const successOverlay = createOverlay("Привет, <b>loftschool</b>!");
-console.log(openButton);
-openButton.addEventListener("click", function() {
-    document.body.appendChild(successOverlay);
-  });
-  
+const openButton = document.querySelectorAll(".openOverlay");
 
-  function createOverlay(content) {
+let overlayDesc =document.querySelectorAll('.reviews__text');
+let overlayDescTitle =document.querySelectorAll('.reviews__title');
+//console.log(overlayDescTitle[0].innerHTML);
+//const successOverlay = createOverlay('title','text');
+
+for (i=0 ; i<openButton.length;i++){
+    let current = i;
+
+    openButton[i].addEventListener("click", (e)=> {
+        event.preventDefault();
+      // elem=openButton[current];
+        //    console.log(elem);
+    document.body.appendChild(createOverlay(overlayDescTitle[current] ,overlayDesc[current]));
+  });
+
+}
+
+  function createOverlay(titleIn , textIn) {
     const overlayElement = document.createElement("div");
     overlayElement.classList.add("overlay");
   
     const template = document.querySelector("#overlayTemplate");
+
     overlayElement.innerHTML = template.innerHTML;
-  
+    overlayElement.addEventListener("click", e => {
+        if (e.target === overlayElement) {
+            document.body.removeChild(overlayElement);
+        }
+      });
+   
     const closeElement = overlayElement.querySelector(".close");
-    closeElement.addEventListener("click", function() {
+    closeElement.addEventListener("click", function(e) {
+        e.preventDefault();
       document.body.removeChild(overlayElement);
     });
+   
+    let contentElement = overlayElement.querySelector(".content");
+    let title = contentElement.querySelector(".overlay__title");
+    let text = contentElement.querySelector(".overlay__text");
+
+    title.innerHTML=titleIn.innerHTML;
+    text.innerHTML=textIn.innerHTML;
   
-    const contentElement = overlayElement.querySelector(".content");
-    contentElement.innerHTML = content;
-  
+
     return overlayElement;
+  
   }
 
-});
+
 
 
 ///acccordeon menu
@@ -169,7 +194,6 @@ function accordionMenu (){
         function moveMenu (){
             for (const iterator of menuItems) {
                 if (iterator !=item){
-                    console.log(iterator);
 
                     iterator.classList.remove('is-active');
                    iterator.lastElementChild.style.width = 0;
@@ -206,3 +230,4 @@ function accordionMenu (){
 }
 
 accordionMenu();
+}
