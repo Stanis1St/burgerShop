@@ -257,7 +257,7 @@ send.addEventListener('click',event => {
  
     event.preventDefault();
 
-    if(validateForm(myForm)){
+   if(validateForm(myForm)){
 
 
 
@@ -285,7 +285,7 @@ send.addEventListener('click',event => {
             }
           });
           
-        }
+       }
 
 })
 
@@ -322,8 +322,14 @@ function validateForm(form){
         valid=false;
 
     }
-    
+    if(!validField(form.elements.street)){
+        valid=false;
 
+    }
+    if(!validField(form.elements.house)){
+        valid=false;
+
+    }
     if(!validField(form.elements.comment)){
         valid=false;
 
@@ -333,10 +339,10 @@ function validateForm(form){
 }
 function validField(field){
     if(!field.checkValidity()){
-       // field.nextElementSibling.textContent=field.validationMessage;
+        field.nextElementSibling.textContent=field.validationMessage;
         return false;
     }else {
-  //  field.nextElementSibling.textContent = '';
+   field.nextElementSibling.textContent = '';
     return true;
     }
 
