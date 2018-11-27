@@ -823,6 +823,7 @@ textarea::placeholder {
 
 .form__input {
   width: 100%;
+  position: relative;
   -webkit-border-radius: 0.1875rem;
           border-radius: 0.1875rem;
   border: 0.1875rem solid transparent; }
@@ -934,6 +935,7 @@ textarea::placeholder {
   height: 0.937rem; }
 
 .error {
+  position: absolute;
   color: red; }
 
 .pagination {
