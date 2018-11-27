@@ -934,6 +934,12 @@ textarea::placeholder {
   width: 0.937rem;
   height: 0.937rem; }
 
+input:focus {
+  border-color: #f9b43b; }
+
+textarea:focus {
+  border-color: #f9b43b; }
+
 .error {
   position: absolute;
   color: red; }

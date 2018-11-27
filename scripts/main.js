@@ -340,6 +340,7 @@ function validateForm(form){
 function validField(field){
     if(!field.checkValidity()){
         field.nextElementSibling.textContent=field.validationMessage;
+        console.log(field.validationMessage);
         return false;
     }else {
    field.nextElementSibling.textContent = '';
