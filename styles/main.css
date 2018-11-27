@@ -933,6 +933,9 @@ textarea::placeholder {
   width: 0.937rem;
   height: 0.937rem; }
 
+.error {
+  color: red; }
+
 .pagination {
   position: fixed;
   z-index: 2;
@@ -1836,3 +1839,6 @@ textarea::placeholder {
   font-size: 0.875rem;
   font-family: "Gagalin-regular";
   line-height: 2; }
+
+.overlay__text {
+  text-align: center; }
