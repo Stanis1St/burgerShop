@@ -198,9 +198,9 @@ input[type="text"]::placeholder {
     input:focus {
         border-color:$yellow;
       }
-      
+
       textarea:focus {
-        border-color:$yellow;
+        border-color:red;
       }
       
       
