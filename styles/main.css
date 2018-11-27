@@ -938,7 +938,7 @@ input:focus {
   border-color: #f9b43b; }
 
 textarea:focus {
-  border-color: #f9b43b; }
+  border-color: red; }
 
 .error {
   position: absolute;
@@ -1844,6 +1844,7 @@ textarea:focus {
             transform: rotate(-45deg); }
 
 .overlay__title {
+  text-align: center;
   font-size: 0.875rem;
   font-family: "Gagalin-regular";
   line-height: 2; }
