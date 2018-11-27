@@ -117,12 +117,13 @@ for (i=0 ; i<openButton.length;i++){
         event.preventDefault();
       // elem=openButton[current];
         //    console.log(elem);
-    document.body.appendChild(createOverlay(overlayDescTitle[current] ,overlayDesc[current]));
+    document.body.appendChild(createOverlay( overlayDesc[current] , overlayDescTitle[current]     )   );
   });
 
 }
 
-  function createOverlay(titleIn , textIn) {
+  function createOverlay(  textIn ,titleIn) {
+   //  console.log(titleIn);
     const overlayElement = document.createElement("div");
     overlayElement.classList.add("overlay");
   
@@ -142,11 +143,26 @@ for (i=0 ; i<openButton.length;i++){
     });
    
     let contentElement = overlayElement.querySelector(".content");
-    let title = contentElement.querySelector(".overlay__title");
-    let text = contentElement.querySelector(".overlay__text");
+    if (titleIn != undefined){
+        let title = contentElement.querySelector(".overlay__title");
+        let text = contentElement.querySelector(".overlay__text");
+    
+        title.innerHTML=titleIn.innerHTML;
+        text.innerHTML=textIn.innerHTML;
+    }else{
 
-    title.innerHTML=titleIn.innerHTML;
-    text.innerHTML=textIn.innerHTML;
+        let text = contentElement.querySelector(".overlay__text");
+        
+        if(typeof textIn ==='string'){
+
+         //   console.log(text.textContent);
+           text.textContent = textIn;
+        }else{
+        text.innerHTML=textIn.innerHTML;
+        }
+
+    }
+ 
   
 
     return overlayElement;
@@ -230,4 +246,108 @@ function accordionMenu (){
 }
 
 accordionMenu();
+
+
+///order 
+const myForm =document.querySelector('.form');
+const send =document.querySelector('#send');
+
+
+send.addEventListener('click',event => {
+ 
+    event.preventDefault();
+
+    if(validateForm(myForm)){
+
+
+
+
+        let formData = new FormData(myForm);
+        formData.append("name", myForm.elements.name.value);
+        formData.append("phone", myForm.elements.phone.value);
+        formData.append("comment", myForm.elements.comment.value);
+        formData.append("to", 'mail@mail.com');
+       ///  console.log(formData);
+
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
+        xhr.send(formData);
+        xhr.addEventListener('load', () => {
+            if (xhr.status <=400 ) {
+                         const message = xhr.response.message;
+                        document.body.appendChild( createOverlay(message) )
+//
+            }else {
+                const message ='Что-то пошло не так';
+                document.body.appendChild( createOverlay(message) )
+
+            }
+          });
+          
+        }
+
+})
+
+
+let phone = document.querySelector('#phone');
+phone.addEventListener('keydown', function(event){
+    let isDigit = false ;
+    let isDash = false;
+    let isControl = false;
+    let isPaste = false;
+    if (event.key >= 0 || event.key <= 9){
+        isDigit = true;
+    }
+    if (event.key =='-'){
+        isDash=true;
+    }
+    if (event.key  ==='ArrowLeft'||event.key  ==='ArrowRight'||event.key  ==='Backspace'){
+        isControl =true;
+    }
+
+    if (!isDigit && !isDash && !isControl){
+        event.preventDefault();
+    }
+})
+
+
+function validateForm(form){
+    let valid = true ;
+    if (!validField(form.elements.name)){
+        valid=false;
+
+    }
+     if(!validField(form.elements.phone)){
+        valid=false;
+
+    }
+    
+
+    if(!validField(form.elements.comment)){
+        valid=false;
+
+    }
+    
+    return valid;
+}
+function validField(field){
+    if(!field.checkValidity()){
+       // field.nextElementSibling.textContent=field.validationMessage;
+        return false;
+    }else {
+  //  field.nextElementSibling.textContent = '';
+    return true;
+    }
+
+}
+
+
+
+
+
+
+
+
+
 }

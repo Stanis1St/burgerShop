@@ -522,22 +522,30 @@
             <section class="section order">
                 <div class="container">
                     <div class="title title_order">закажите доставку</div>
-                    <form action class="form">
+                    <form  class="form" action="">
                         <div class="form__col form_part1">
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__block-title">Имя </div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="name" required>
+                                    <div class="error"></div>
+
                                 </label>
                                 <label class="form__block ">
                                     <div class="form__block-title">Телефон </div>
-                                    <input type="text" class="form__input is-active" placeholder="89212264923">
+                                    <input type="text" id="phone" class="form__input " placeholder="89212264923" name="phone" required>
+                                    <div class="error"></div>
+
                                 </label>
+
+
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__block-title">Улица </div>
-                                    <input type="text" class="form__input" placeholder="ул Ленина">
+                                    <input type="text" class="form__input" name="street" required >
+                                    <div class="error"></div>
+
                                 </label>
 
                             </div>
@@ -545,19 +553,20 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__block-title">Дом </div>
-                                    <input type="text" class="form__input" placeholder="д 2">
+                                    <input type="text" class="form__input" name="house"  required>
+                                    <div class="error"></div>                                    
                                 </label>
                                 <label class="form__block">
                                     <div class="form__block-title">Корпус </div>
-                                    <input type="text" class="form__input" placeholder="кп 3">
+                                    <input type="text" class="form__input" >
                                 </label>
                                 <label class="form__block">
                                     <div class="form__block-title">Квартира </div>
-                                    <input type="text" class="form__input" placeholder="кв 4">
+                                    <input type="text" class="form__input" >
                                 </label>
                                 <label class="form__block">
                                     <div class="form__block-title">Этаж </div>
-                                    <input type="text" class="form__input" placeholder="эт 3">
+                                    <input type="text" class="form__input" >
                                 </label>
 
                             </div>
@@ -566,8 +575,9 @@
                             <div class="form__row">
                                 <label for="comment" class="form__block">
                                     <div class="form__block-title">Комментарий </div>
-                                    <textarea name="" id="comment" class="textarea__input" rows="5"
-                                        placeholder="Напишите дополнительные сведения"></textarea>
+                                    <textarea name="comment"  class="textarea__input" rows="5"
+                                        placeholder="Напишите дополнительные сведения о заказе"  name ="comment" required></textarea>
+                                        <div class="error"></div>
 
                                 </label>
                             </div>
@@ -596,7 +606,7 @@
                             </div>
                                 <div class="form__row">
                                     <div class="form__buttons">
-                                        <button type="button" class="btn btn--red ">Заказать</button>
+                                        <button type="submit" id="send" class="btn btn--red ">Заказать</button>
                                     </div>
                                     <label class="form__reset">
                                         <input type="reset" value="Очистить" class="reset__button" >
@@ -716,7 +726,6 @@
                 </a>
             </div>
         </div>
-        <div class="c"></div>
     </div>
     <script src="scripts/jquery-3.3.1.min.js"></script>
     <script src="scripts/main.js"></script>
