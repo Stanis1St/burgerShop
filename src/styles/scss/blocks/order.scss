@@ -195,7 +195,15 @@ input[type="text"]::placeholder {
         height: 0.937rem;
     }
 
-                                 
+    input:focus {
+        border-color:$yellow;
+      }
+      
+      textarea:focus {
+        border-color:$yellow;
+      }
+      
+      
 .error{
     position: absolute;
     color:red;
