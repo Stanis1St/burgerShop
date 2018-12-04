@@ -465,7 +465,7 @@ let isScroll = false;
     setTimeout(() => {
       isScroll = false;
       addClass(points,'pagination__link--active');
-    }, 1000);
+    }, 700);
 
     function addClass(arr, str) {
       arr[numPage].classList.add(str);
@@ -628,12 +628,6 @@ let isScroll = false;
 }   //on load
 
 
+/*
 
-var player;
-function onYouTubePlayerAPIReady() {
-  player = new YT.Player('yt-player', {
-    height: '360',
-    width: '640',
-    videoId: 'M7lc1UVf-VE'
-  });
-}
+*/
