@@ -15,13 +15,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./styles/found/normalize.css" rel="stylesheet">
     <link href="./styles/main.css" rel="stylesheet">
+   
     <title>Burgers</title>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="maincontent">
-            <section class="hero section">
+            <section class="hero section is-active" data-scroll-to="0">
                 <div class="container container__hero ">
                     <header class="header">
                         <a href="index.html" class="logo">
@@ -30,17 +31,17 @@
                         <div class="header__buttons">
                             <nav class="nav__header">
                                 <ul class="nav__list">
-                                    <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                                    <li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
-                                    <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
-                                    <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
-                                    <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-                                    <li class="nav__item"><a href="#" class="nav__link">Как мы работаем</a></li>
-                                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link"data-scroll-to="1">О нас</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link"data-scroll-to="2">Бургеры</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link"data-scroll-to="3">Команда</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link"data-scroll-to="4">Меню</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link"data-scroll-to="5">Отзывы</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link"data-scroll-to="6">Как мы работаем</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link"data-scroll-to="8">Контакты</a></li>
                                 </ul>
                             </nav>
                             <div class="header__links">                           
-                            <button type="button" class="btn ">Заказать</button>
+                            <button type="button" class="btn "data-scroll-to="7">Заказать</button>
                            
                         </div>
                         </div>
@@ -64,11 +65,10 @@
                     <button type="button" class=" to-next-section"></button>
                     
                     </div>
-                </div>
+               
               
-
             </section>
-            <section class="best section">
+            <section class="best section" data-scroll-to="1">
                 <div class="container">
                     <div class="title title--color-black"> Мы лучшие </div>
                     <ul class="best__list">
@@ -121,8 +121,9 @@
                         </li>
                     </ul>
                 </div>
+               
             </section>
-            <section class="section burgers">
+            <section class="section burgers" data-scroll-to="2">
                 <div class="container container__burgers ">
                     <div class="slider">
                         <div class="slider__control">
@@ -309,7 +310,7 @@
                     </div>
                 </div>
             </section>
-      <section class="section team">
+      <section class="section team" data-scroll-to="3">
         <div class="team__section">
           <div class="team__content">
             <div class="title title_team">Команда </div>
@@ -376,7 +377,7 @@
         </div>
       </section>
 
-           <section class="section menu">
+           <section class="section menu" data-scroll-to="4">
             <h2 class="title title_menu">Меню</h2>
 
                <ul class="menu__accordion">
@@ -386,8 +387,9 @@
                     </a>
                     <div class="menu__content">
                         <div class="menu__text">
+                            <p>
                                 Речевой акт редуцирует диалектический характер. Развивая  эту тему, заимствование  редуцирует конструктивный механизм сочленений.Личический субъект начинает диссонансный анжамбеман. Наш современник стал особо чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания как справедливо считает И.Гальперин, пространнственно выбирает метр.
-
+                                </p>
                         </div>
                     </div>
                    </li>
@@ -397,8 +399,9 @@
                      </a>
                      <div class="menu__content">
                          <div class="menu__text">
+                             <p>
                                  Речевой акт редуцирует диалектический характер. Развивая  эту тему, заимствование  редуцирует конструктивный механизм сочленений.Личический субъект начинает диссонансный анжамбеман. Наш современник стал особо чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания как справедливо считает И.Гальперин, пространнственно выбирает метр.
- 
+                                </p>
                          </div>
                      </div>
                     </li>
@@ -408,8 +411,9 @@
                          </a>
                          <div class="menu__content">
                              <div class="menu__text">
+                                <p>
                                      Речевой акт редуцирует диалектический характер. Развивая  эту тему, заимствование  редуцирует конструктивный механизм сочленений.Личический субъект начинает диссонансный анжамбеман. Наш современник стал особо чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания как справедливо считает И.Гальперин, пространнственно выбирает метр.
-     
+                                    </p>
                              </div>
                          </div>
                         </li>
@@ -417,7 +421,7 @@
            
            </section>
            
-            <section class=" section reviews">
+            <section class=" section reviews" data-scroll-to="5">
                 <ul class="reviews__list">
                     <li class="reviews__item " style="background-image: url('images/reviews/foto1.jpg')">
                       
@@ -429,7 +433,7 @@
                                     расплавленным.</p>
                             </div>
                             <button type="button " class="btn btn--bg-black openOverlay">Подробнее</button>
-                            <button type="button" class="btn btn--bg-black btn-review_phones">Читать отзыв</button>
+                            <button type="button" class="btn btn--bg-black btn-review_phones openOverlay-phone">Читать отзыв</button>
                         </div>
                      
                     </li>
@@ -442,7 +446,7 @@
                                     расплавленным.</p>
                             </div>
                             <button type="button " class="btn btn--bg-black openOverlay">Подробнее</button>
-                            <button type="button" class="btn btn--bg-black btn-review_phones">Читать отзыв</button>
+                            <button type="button" class="btn btn--bg-black btn-review_phones openOverlay-phone">Читать отзыв</button>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./images/reviews/foto3.jpg')">
@@ -454,7 +458,7 @@
                                     расплавленным.</p>
                             </div>
                             <button type="button " class="btn btn--bg-black openOverlay">Подробнее</button>
-                            <button type="button" class="btn btn--bg-black btn-review_phones">Читать отзыв</button>
+                            <button type="button" class="btn btn--bg-black btn-review_phones openOverlay-phone">Читать отзыв</button>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./images/reviews/foto4.jpg')">
@@ -466,7 +470,7 @@
                                     расплавленным.</p>
                             </div>
                             <button type="button " class="btn btn--bg-black openOverlay">Подробнее</button>
-                            <button type="button" class="btn btn--bg-black btn-review_phones">Читать отзыв</button>
+                            <button type="button" class="btn btn--bg-black btn-review_phones openOverlay-phone">Читать отзыв</button>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./images/reviews/foto5.jpg')">
@@ -478,7 +482,7 @@
                                     расплавленным.</p>
                             </div>
                             <button type="button " class="btn btn--bg-black openOverlay">Подробнее</button>
-                            <button type="button" class="btn btn--bg-black btn-review_phones">Читать отзыв</button>
+                            <button type="button" class="btn btn--bg-black btn-review_phones openOverlay-phone">Читать отзыв</button>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./images/reviews/foto6.jpg')">
@@ -490,7 +494,7 @@
                                     расплавленным.</p>
                             </div>
                             <button type="button " class="btn btn--bg-black openOverlay">Подробнее</button>
-                            <button type="button" class="btn btn--bg-black btn-review_phones">Читать отзыв</button>
+                            <button type="button" class="btn btn--bg-black btn-review_phones openOverlay-phone">Читать отзыв</button>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./images/reviews/foto7.jpg')">
@@ -502,7 +506,7 @@
                                     расплавленным.</p>
                             </div>
                             <button type="button " class="btn btn--bg-black openOverlay">Подробнее</button>
-                            <button type="button" class="btn btn--bg-black btn-review_phones">Читать отзыв</button>
+                            <button type="button" class="btn btn--bg-black btn-review_phones openOverlay-phone">Читать отзыв</button>
                         </div>
                     </li>
                     <li class="reviews__item" style="background-image: url('./images/reviews/foto8.jpg')">
@@ -514,12 +518,22 @@
                                     расплавленным.</p>
                             </div>
                             <button type="button " class="btn btn--bg-black openOverlay">Подробнее</button>
-                            <button type="button" class="btn btn--bg-black btn-review_phones">Читать отзыв</button>
+                            <button type="button" class="btn btn--bg-black btn-review_phones openOverlay-phone">Читать отзыв</button>
                         </div>
                     </li>
                 </ul>
             </section>
-            <section class="section order">
+            <section class="section video" data-scroll-to="6">
+                <div class="container container-player">
+                <div class=" title title--color-black">
+                    как мы работаем
+                </div>
+                <div id="yt-player">
+
+                </div>
+                </div>
+            </section>
+            <section class="section order" data-scroll-to="7">
                 <div class="container">
                     <div class="title title_order">закажите доставку</div>
                     <form  class="form" action="">
@@ -619,7 +633,10 @@
                     </form>
 
             </section>
-            <section class="section map">
+            <section class="section map " data-scroll-to="8">
+                <div class="map__block" id="map">
+
+                </div>
                 <div class="footer">
                     <div class="container">
                         <div class="footer-row">
@@ -670,48 +687,50 @@
                     </div>
                 </div>
             </section>
+           
+    </div>
             <div class="pagination">
               <ul class="pagination__list">
-                <li class="pagination__item">
-                  <a href="#" class="pagination__link pagination__link--active"></a>
+                <li class="pagination__item" >
+                  <a href="#" class="pagination__link  pagination__link--active" data-scroll-to="0" ></a>
                 </li>
                 <li class="pagination__item">
-                  <a href="#" class="pagination__link"></a>
+                  <a href="#" class="pagination__link" data-scroll-to="1"></a>
                 </li>
                 <li class="pagination__item">
-                  <a href="#" class="pagination__link"></a>
+                  <a href="#" class="pagination__link" data-scroll-to="2"></a>
                 </li>
                 <li class="pagination__item">
-                  <a href="#" class="pagination__link"></a>
+                  <a href="#" class="pagination__link" data-scroll-to="3"></a>
                 </li>
                 <li class="pagination__item">
-                  <a href="#" class="pagination__link"></a>
+                  <a href="#" class="pagination__link"data-scroll-to="4"></a>
                 </li>
                 <li class="pagination__item">
-                  <a href="#" class="pagination__link"></a>
+                  <a href="#" class="pagination__link"data-scroll-to="5"></a>
                 </li>
                 <li class="pagination__item">
-                  <a href="#" class="pagination__link"></a>
+                  <a href="#" class="pagination__link" data-scroll-to="6"></a>
                 </li>
                 <li class="pagination__item">
-                  <a href="#" class="pagination__link"></a>
+                  <a href="#" class="pagination__link" data-scroll-to="7"></a>
                 </li>
                 <li class="pagination__item">
-                  <a href="#" class="pagination__link"></a>
+                  <a href="#" class="pagination__link" data-scroll-to="8"></a>
                 </li>
               </ul>
             </div>
             <div class="nav-mobile  ">
                 <div class="nav-mobile__menu">
                     <ul class="nav-mobile__list">
-                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Главная</a></li>
-                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">О нас</a></li>
-                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Бургеры</a></li>
-                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Команда </a></li>
-                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Меню</a></li>
-                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Отзывы</a></li>
-                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Как мы работаем</a></li>
-                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Контакты </a></li>
+                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link" data-scroll-to="0">Главная</a></li>
+                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link" data-scroll-to="1">О нас</a></li>
+                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link" data-scroll-to="2">Бургеры</a></li>
+                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link" data-scroll-to="3">Команда </a></li>
+                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link"data-scroll-to="4">Меню</a></li>
+                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link" data-scroll-to="5">Отзывы</a></li>
+                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link" data-scroll-to="6">Как мы работаем</a></li>
+                        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link" data-scroll-to="7">Контакты </a></li>
                     </ul>
                 </div>
                 <div class="mobile__logo">
@@ -728,7 +747,37 @@
         </div>
     </div>
     <script src="scripts/jquery-3.3.1.min.js"></script>
+
+    <script src="scripts/player.js"></script>
+
+    <script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('yt-player', {
+      height: '360',
+      width: '340',
+      playerVars: { 
+          'autoplay': 0, 
+          'controls': 0 ,
+          'rel':0,
+          'modestbranding':0,
+          'showinfo':0,
+        },
+      videoId: 'iM_KMYulI_s'
+    });
+  }
+</script>
     <script src="scripts/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=40278d74-56bd-4e4b-8a4a-ac39c0a2cace&lang=ru_RU" type="text/javascript">
+    </script>
+    
     <script type="template" id="overlayTemplate">
         <div class="overlay-wrap">
                 
