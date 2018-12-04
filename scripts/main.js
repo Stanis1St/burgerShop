@@ -419,7 +419,7 @@ function init(){
             {
                 hideIconOnBalloonOpen:false,
             iconLayout: 'default#imageWithContent',
-            iconImageHref: 'images/map/map-marker.png',
+            iconImageHref: '/images/map/map-marker.png',
             iconImageSize: [50, 60],
             iconImageOffset: [-24, -24],
             } ) );
