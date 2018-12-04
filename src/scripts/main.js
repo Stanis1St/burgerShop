@@ -419,7 +419,7 @@ function init(){
             {
                 hideIconOnBalloonOpen:false,
             iconLayout: 'default#imageWithContent',
-            iconImageHref: '../images/map/map-marker.png',
+            iconImageHref: 'images/map/map-marker.png',
             iconImageSize: [50, 60],
             iconImageOffset: [-24, -24],
             } ) );
@@ -465,7 +465,7 @@ let isScroll = false;
     setTimeout(() => {
       isScroll = false;
       addClass(points,'pagination__link--active');
-    }, 700);
+    }, 00);
 
     function addClass(arr, str) {
       arr[numPage].classList.add(str);
