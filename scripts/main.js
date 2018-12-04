@@ -103,7 +103,22 @@ mySlider();
    
 
 /// overlay 
-const openButton = document.querySelectorAll(".openOverlay");
+let openButton ;
+//mobileButton ();
+ openButton=mobileButton (openButton);
+function mobileButton (btnIn){
+let btn =btnIn;
+if(window.innerWidth <=480){
+     btn = document.querySelectorAll('.openOverlay-phone');
+}else  {
+    btn = document.querySelectorAll('.openOverlay');
+}
+return  btn;
+}
+///console.log(openButton )
+
+
+
 
 let overlayDesc =document.querySelectorAll('.reviews__text');
 let overlayDescTitle =document.querySelectorAll('.reviews__title');
@@ -220,6 +235,7 @@ function accordionMenu (){
             if (item.classList.contains('is-active')){
              item.classList.remove('is-active');
                content.style.width = 0 ;
+            
             }else  {
                 item.classList.add('is-active');
                 content.style.width = layoutContentWidth + 'px';
@@ -350,6 +366,256 @@ function validField(field){
 }
 
 
+/// map  
+ymaps.ready(init);
+function init(){ 
+    // Создание карты.    
+    var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [59.94, 30.38],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 11,
+        controls:['zoomControl'],
+        behaviors:['drag']
+    }),
+
+    collection = new ymaps.GeoObjectCollection(null, {
+    }),
+
+  /*
+  
+     myPlacemark3 = new ymaps.Placemark(
+        [59.891295,30.316907], 
+      
+      
+        {
+        hintContent:"Московский проспект, 103 ",
+        balloonContentBody: "Московский проспект, 103 ",
+        },      
+         {
+            hideIconOnBalloonOpen:false,
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: '../images/map/map-marker.png',
+        iconImageSize: [50, 60],
+        iconImageOffset: [-24, -24],
+    });
+    */
+    
+    coordinates =[[59.915038, 30.486096],   [59.945, 30.3848],    [59.8912,30.3169],[59.9739,30.3110]] ;
+
+    balloonContent =[["Товарищеский проспект, 20/27Б"],[ "Суворовский пр, 54"],["Московский проспект, 103"],["улица Чапыгина, 13А"]]
+
+    
+    for (var i = 0, l = coordinates.length; i < l; i++) {
+       collection.add(new ymaps.Placemark(coordinates[i],
+            {
+                balloonContentBody:balloonContent[i]
+            },
+
+            {
+                hideIconOnBalloonOpen:false,
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: '../images/map/map-marker.png',
+            iconImageSize: [50, 60],
+            iconImageOffset: [-24, -24],
+            } ) );
+    }
+    myMap.geoObjects
+        .add(collection)       
+    
+}
+
+
+
+///video
+
+
+
+///one-page scroll
+
+function onePageScrooll(){
+
+const wrapper = document.querySelector('.wrapper');
+const content = wrapper.querySelector('.maincontent');
+const pages = content.querySelectorAll('.section');
+const points = document.querySelectorAll('.pagination__link');
+const dataScrollto= document.querySelectorAll('[data-scroll-to]');
+wrapper.innerHTML
+let isScroll = false;
+
+  addNavigation();
+  wheel();
+  keyPush();
+
+  function moveToPage(numPage) {
+    const position = `${numPage * -100}%`;
+
+    if (isScroll) return;
+
+    isScroll = true;
+
+    addClass(pages,'is-active');
+
+    content.style.transform = `translateY(${position})`;
+
+    setTimeout(() => {
+      isScroll = false;
+      addClass(points,'pagination__link--active');
+    }, 1000);
+
+    function addClass(arr, str) {
+      arr[numPage].classList.add(str);
+      for (const iterator of arr) {
+        if (iterator !== arr[numPage]) {
+          iterator.classList.remove(str);
+        }
+      }
+    }
+  }
+
+  function addNavigation() {
+    for (const iterator of dataScrollto) {
+      iterator.addEventListener('click', e => {
+        e.preventDefault();
+        moveToPage(iterator.dataset.scrollTo);
+      });
+    }
+  }
+
+  function wheel() {
+    document.addEventListener('wheel', e => {
+      const direct = e.deltaY > 0 ? 'up' : 'down';
+
+      scrollToPage(direct);
+    });
+  }
+
+  function definePage(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      const element = arr[i];
+      if (element.classList.contains('is-active')) {
+        return {
+          elIndex: i,
+          elActive: element,
+          elNext: element.nextElementSibling,
+          elPrev: element.previousElementSibling
+        };
+      }
+    }
+  }
+
+  function scrollToPage(direct) {
+    let page = definePage(pages);
+   
+    if (direct === 'up' && page.elNext) {
+      let numPage = page.elIndex + 1;
+      moveToPage(numPage);
+    }
+    if (direct === 'down' && page.elPrev) {
+      let numPage = page.elIndex - 1;
+      moveToPage(numPage);
+    }
+  }
+
+  function keyPush() {
+    document.addEventListener('keydown', e => {
+      switch (e.keyCode) {
+        case 40:
+          scrollToPage('up');
+          break;
+        case 38:
+          scrollToPage('down');
+          break;
+        default:
+          break;
+      }
+    });
+  }
+
+  if (isMobileDevice()) swipe();
+
+  function swipe() {
+    let touchStartY = 0;
+    let touchEndY = 0;
+
+    document.addEventListener(
+      'touchstart',
+      e => {
+        touchStartY = e.changedTouches[0].screenY;
+      },
+      false
+    );
+
+    wrapper.addEventListener('touchmove', e =>{
+         e.preventDefault()
+        
+    });
+
+    document.addEventListener(
+      'touchend',
+      e => {
+         // console.log( e.changedTouches[0].screenY);
+        touchEndY = e.changedTouches[0].screenY;
+        let direct = swipeDirect();
+        scrollToPage(direct);
+      },
+      false
+    );
+
+    function swipeDirect() {
+      let dif = touchStartY - touchEndY;
+      if (dif > 100) {
+        return 'up';
+      } else if (dif < -100) {
+        return 'down';
+      }
+    }
+  }
+
+  function isMobileDevice() {
+    return (
+      typeof window.orientation !== 'undefined' ||
+      navigator.userAgent.indexOf('IEMobile') !== -1
+    );
+  }
+
+   
+}   /// one page
+
+
+    onePageScrooll();
+    
+
+
+
+        //video
+
+        /*
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+        let player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('yt-player', {
+            height: '405',
+            width: '660',
+            videoId: 'M7lc1UVf-VE',
+            events: {
+             // 'onReady': onPlayerReady,
+             // 'onStateChange': onPlayerStateChange
+            }
+          });
+        }
+
+*/
 
 
 
@@ -357,4 +623,17 @@ function validField(field){
 
 
 
+
+
+}   //on load
+
+
+
+var player;
+function onYouTubePlayerAPIReady() {
+  player = new YT.Player('yt-player', {
+    height: '360',
+    width: '640',
+    videoId: 'M7lc1UVf-VE'
+  });
 }

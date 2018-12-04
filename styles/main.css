@@ -97,9 +97,14 @@ footer {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.maincontent {
+  height: 100%;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s; }
+
 .section {
-  overflow: hidden;
-  height: 100vh; }
+  height: 100%; }
   .section_centered {
     display: -webkit-box;
     display: -webkit-flex;
@@ -141,7 +146,7 @@ footer {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden; }
 
 h1,
@@ -1056,6 +1061,7 @@ textarea:focus {
     width: 32.5rem; }
 
 .menu__link {
+  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1081,13 +1087,12 @@ textarea:focus {
   transition: width 0.7s; }
 
 .menu__text {
+  padding: 0.625rem;
   font-family: "ubuntulight";
   color: #fff;
   font-size: 0.875rem;
   opacity: 0;
-  line-height: 1.8;
-  padding: 4rem 2rem;
-  opacity: 0; }
+  line-height: 1.8; }
 
 .nav-mobile {
   background: black;
@@ -1528,6 +1533,10 @@ textarea:focus {
   fill: #e35028;
   margin-right: 0.3125rem; }
 
+.map__block {
+  width: 100%;
+  height: 100%; }
+
 .burgers {
   background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
   background: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
@@ -1851,3 +1860,47 @@ textarea:focus {
 
 .overlay__text {
   text-align: center; }
+
+.video {
+  background: url("../images/video/video-bg .png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+#yt-player {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center; }
+
+.container-player {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
