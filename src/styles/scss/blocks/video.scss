@@ -1,8 +1,7 @@
 .video{
     background: url('../images/video/video-bg .png');
     @include cover;
-    display: flex;
-    align-items: center;
+   
 
 }
 #yt-player{
@@ -13,8 +12,161 @@
 .container-player{
     height: 100%;
     display: flex;
+    width: 660px;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 
 }
+
+
+
+/*
+.player__start{
+    
+}
+.player__playback{
+    position: relative;
+    background: black;
+    flex:1;
+    display: flex;
+    align-items: center;
+}
+
+.playback__line{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: #626262;
+    height: 5px;
+    
+}
+.player__duration{
+    color: #626262;;
+ background: black;
+}
+
+
+*/
+video{
+    height: 100%;
+}
+
+
+.player {
+	position: relative;
+	text-align: center;
+	margin-top: 50px;    
+}
+.player__wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.player__controls{
+    background: black;
+    height:40px;
+    display: flex;
+}
+
+.player__start {
+    width:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ &.paused{
+
+ 
+
+    .player__start-btn {
+        height: 60%;
+        border: none;
+        border-left: 5px solid #626262;
+        border-right: 5px solid #626262;
+        border-radius: 0;
+        transform: none;
+    }
+
+
+ }
+}
+.player__start-btn{
+   
+   transform: translateX(30%);
+    background-color: transparent;
+    border: none;
+    border: 10px solid transparent;
+    border-left: 12px solid #626262;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+
+
+}
+
+.player__playback{
+    flex:1;
+    position: relative;
+
+    margin-right: 35px;
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+.player__playback-button {
+    width: 12Px;                /// кнопка ползунок
+    height: 12Px;
+    background: #626262;
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    top: 32%;
+    
+}
+.playback__line{
+height: 5px;
+background: #626262;
+width: 100%;
+
+}
+.player__volume{
+    width: 130px;
+    display: flex;
+    
+}          
+
+.volume__svg{
+    display: block;
+    height: 100%;
+   width:30px;
+}
+.volume__lvl{
+position: relative;
+width: 80%;
+display: flex;
+align-items: center;
+}
+
+
+.volume__button{
+    width: 12Px;                /// кнопка ползунок
+    height: 12Px;
+    background: #626262;
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    top: 32%;
+}
+.volume__line{
+    height: 5px;
+background: #626262;
+width: 100%;
+}
+
+
+
+
