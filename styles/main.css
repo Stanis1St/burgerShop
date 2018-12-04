@@ -1407,7 +1407,6 @@ textarea:focus {
       text-align: center; } }
 
 .map {
-  background: url("../images/map/map-bg.jpg") center/cover;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
