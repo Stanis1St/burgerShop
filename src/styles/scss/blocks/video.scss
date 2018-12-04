@@ -17,6 +17,9 @@
     flex-direction: column;
     align-items: center;
 
+    @include tablets() {
+        width: 90%;
+      }
 }
 
 
@@ -62,6 +65,7 @@ video{
 .player__wrapper{
     display: flex;
     flex-direction: column;
+
 }
 
 .player__controls{
@@ -134,6 +138,7 @@ width: 100%;
 
 }
 .player__volume{
+    margin-right: 20px;
     width: 130px;
     display: flex;
     

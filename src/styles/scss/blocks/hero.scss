@@ -33,6 +33,9 @@ display: flex;
       text-align: center;
       padding: 0 10%;
     }
+    @include phones{
+      margin-bottom: 50px;
+    }
   }
   
   .hero__container {
@@ -49,7 +52,7 @@ display: flex;
     width: 50%;
     @include tablets() {
       float: none;
-      width: auto;
+      width: 80%;
     }
   }
   .hero__right {
@@ -87,6 +90,9 @@ line-height: 1em;
 @include tablets{
     font-size: 3.4rem;
  }
+ @include phones{
+  font-size: 3rem;
+}
 }
 
   
